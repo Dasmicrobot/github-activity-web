@@ -1,0 +1,11 @@
+.tmp
+.sass-cache
+.idea
+*.iml
+*.DS_Store
+_site
+.jekyll
+.jekyll-metadata
+.bundle
+.sass-cache
+Gemfile.lock

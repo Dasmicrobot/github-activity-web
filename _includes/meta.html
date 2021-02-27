@@ -1,0 +1,78 @@
+<meta charset="utf-8"/>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="author" content="{{ site.name }}">
+<meta property="article:author" content="{{ site.name }}">
+<meta name="msvalidate.01" content="E48E922963BC8B6B6576364F13BAC6C1" />
+<meta name="google-site-verification" content="euOzmd4Rwz8DILny5KkCX99g6pS8-EukYaDm3EVl7AY" />
+<link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+{% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+
+<meta name="title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}">
+
+{% if page.excerpt %}
+<meta name="description" content="{{ page.excerpt | strip_html }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+<meta property="og:type" content="article">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.image %}
+<meta property="og:image" content="{{ page.image | prepend: site.url }}">
+<meta name="twitter:image" content="{{ page.image | prepend: site.url }}">
+<meta name="twitter:image:src" content="{{ page.image | prepend: site.url }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Blog",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  {% if page.image %}
+  "image":{
+    "@type":"ImageObject",
+    "url":"{{ page.image | prepend: site.url }}"
+  },
+  {% endif %}
+  "url":"{{ site.url }}{{ page.url }}",
+
+  {% if page.date %}
+  "dateCreated":"{{ page.date | date_to_xmlschema }}",
+  "datePublished":"{{ page.date | date_to_xmlschema }}",
+  "dateModified":"{{ page.date | date_to_xmlschema }}",
+  {% else %}
+  "dateCreated":"{{ site.time | date_to_xmlschema }}",
+  "datePublished":"{{ site.time | date_to_xmlschema }}",
+  "dateModified":"{{ site.time | date_to_xmlschema }}",
+  {% endif %}
+
+  {% if page.excerpt %}
+  "headline":"{{ page.excerpt | strip_html }}",
+  {% else %}
+  "headline":"{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} - {{ site.description }}",
+  {% endif %}
+  "name":"{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}",
+  {% if page.image %}
+  "thumbnailUrl":"{{ page.image | prepend: site.url }}",
+  {% endif %}
+  "author":{
+    "@type":"Person",
+    "name":"{{ site.name }}"
+  }
+}
+</script>

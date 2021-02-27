@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  {% include meta.html %}
+  <link rel="stylesheet" type="text/css" href="{{ '/style.css' | prepend: site.baseurl }}"/>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+        href="{{ '/feed.xml' | prepend: site.baseurl }}"/>
+</head>
+<body>
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="d-flex flex-nowrap justify-content-between align-items-center">
+      <a class="blog-header-logo text-dark" href="{{ site.baseurl }}/" title="{{ site.name }}">
+        {{ site.name }}
+      </a>
+    </div>
+  </header>
+</div>
+
+<div id="main" role="main" class="container">
+  {{ content }}
+</div>
+
+<footer class="blog-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="d-flex flex-md-row">
+          <div class="flex-auto flex-column align-items-start">
+            <small class="d-block text-muted">{{ site.name }}</small>
+            <small class="d-block mb-3 text-muted">&copy; 2021</small>
+          </div>
+          <div class="d-flex flex-column align-items-start ml-3">
+            <h5>About</h5>
+            <p>{{ site.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-around">
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% include analytics.html %}
+</body>
+</html>
