@@ -2,12 +2,57 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="col">
-    <h1>General announcement</h1>
-    <p>2021 February. Work on a new application has begun. A couple of developers will build a solution to the tiny problem. Currently, it is tricky to get the results of the recent developer activity, which repositories they have committed to and at what times.</p>
-    <p>The web-facing application will allow developers to check their past commit activity. After logging in using Github and obtaining a secret token, the application will compile available data and present it to the user. The application code will be under the GPL licence.</p>
-    <p>Compiled data should help with filling in timesheets, understand activity patterns.</p>
-  </div>
-</div>
+<section class="mt-n11 pt-12 pb-8 pt-md-14 pb-md-11 bg-black bg-pattern-2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 text-white">
 
+        <h1 class="display-1 font-weight-bold text-center " data-aos="fade-up" data-aos-delay="50">
+          {{site.name}}
+        </h1>
+
+        <h2 class="display-2 font-weight-bold text-center " data-aos="fade-up" data-aos-delay="50">
+          General announcement
+        </h2>
+
+      </div>
+
+      <div class="col-12 col-lg-5 text-white">
+        <p class="lead text-gray-500 mb-6 mx-auto" style="max-width: 500px;">
+          2021 February. Work on a new application has begun. A couple of developers will build a solution to the tiny problem. Currently, it is tricky to get the results of the recent developer activity, which repositories they have committed to and at what times.
+        </p>
+      </div>
+      <div class="col-12 col-lg-5 text-white">
+        <p class="lead text-gray-500 mb-6 mx-auto" style="max-width: 500px;">
+          The web-facing application will allow developers to check their past commit activity. After logging in using Github and obtaining a secret token, the application will compile available data and present it to the user. The application code will be under the GPL licence.
+        </p>
+      </div>
+      <div class="col-12 col-lg-5 text-white">
+        <p class="lead text-gray-500 mb-6 mx-auto" style="max-width: 500px;">
+          Compiled data should help with filling in timesheets, understand activity patterns.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE
+    ================================================== -->
+<section class="py-14 py-lg-16 jarallax" data-jarallax data-speed=".8" style="background-image: url(assets/img/covers/cover-19.jpg);">
+
+  <!-- Shape -->
+  <div class="shape shape-top shape-fluid-x svg-shim text-black">
+    <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h2880v125h-720L720 250H0V0z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- Shape -->
+  <div class="shape shape-bottom shape-fluid-x svg-shim text-black">
+    <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M720 125L2160 0h720v250H0V125h720z" fill="currentColor"/></svg>
+  </div>
+
+</section>
+
+<script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+<script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+<script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>

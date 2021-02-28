@@ -9,41 +9,36 @@
 </head>
 <body>
 
-<div class="container">
-  <header class="blog-header py-3">
-    <div class="d-flex flex-nowrap justify-content-between align-items-center">
-      <a class="blog-header-logo text-dark" href="{{ site.baseurl }}/" title="{{ site.name }}">
-        {{ site.name }}
+<!-- NAVBAR
+================================================== -->
+<header class="container">
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <img src="./assets/logo.svg" height="50" class="navbar-brand-img" alt="{{ site.name }}">
       </a>
     </div>
-  </header>
-</div>
+  </nav>
+</header>
 
-<div id="main" role="main" class="container">
+<!-- MAIN CONTENT
+================================================== -->
+<div id="main" role="main">
   {{ content }}
 </div>
 
-<footer class="blog-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="d-flex flex-md-row">
-          <div class="flex-auto flex-column align-items-start">
-            <small class="d-block text-muted">{{ site.name }}</small>
-            <small class="d-block mb-3 text-muted">&copy; 2021</small>
-          </div>
-          <div class="d-flex flex-column align-items-start ml-3">
-            <h5>About</h5>
-            <p>{{ site.description }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-around">
-        <p>
-          <a href="#">Back to top</a>
-        </p>
-      </div>
-    </div>
+<!-- BORDER
+    ================================================== -->
+<div class="bg-black">
+  <div class="container border-top border-gray-900-50"></div>
+</div>
+
+<!-- FOOTER
+================================================== -->
+<footer class="py-8 py-md-11 bg-black">
+  <div class="container text-center">
+    <small class="text-gray-700">{{ site.name }} &copy; 2021</small>
   </div>
 </footer>
 
