@@ -1,0 +1,25 @@
+/**
+ * Custom variables followed by theme variables followed by Bootstrap variables
+ * to ensure cascade of styles.
+ */
+
+// Bootstrap functions
+@import 'bootstrap-4.6/functions';
+
+// Theme functions
+@import 'theme/functions';
+
+// Custom variables
+@import 'user-variables';
+
+// Theme variables
+@import 'theme/variables';
+
+// Bootstrap core
+@import 'bootstrap-4.6/bootstrap';
+
+// Theme core
+@import 'theme/theme';
+
+// Custom core
+@import 'user';
