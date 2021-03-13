@@ -64,3 +64,4 @@ exclude:
 - CNAME
 - .idea
 - github-activity-web.iml
+- deploy.sh
