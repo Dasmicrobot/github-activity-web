@@ -63,3 +63,4 @@ exclude:
 - README.md
 - CNAME
 - .idea
+- github-activity-web.iml
